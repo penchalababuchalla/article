@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="col-8">
+		Title:{{article.title}}<br>
+		Author:{{article.author}}<br>
+		Body:{{article.body}}<br>
+		<a routerLink="" routerLinkActive="active">Back</a>
+	</div>
+	<div class="col-4">
+		<button (click)="editArticle()" class="editbtnclr">Edit</button>
+		<button (click)="deleteArticle()" class="deletebtnclr">Delete</button>
+	</div>
+</div>
+
