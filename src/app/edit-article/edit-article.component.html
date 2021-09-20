@@ -1,4 +1,4 @@
-Title:<input type="text" name="title" [(ngModel)]="title">
-Author:<input type="text" name="author" [(ngModel)]="author">
-Body:<input type="text" name="body" [(ngModel)]="body">
-
+Title:<input type="text" name="title" [(ngModel)]="article.title"><br>
+Author:<input type="text" name="author" [(ngModel)]="article.author"><br>
+Body:<input type="text" name="body" [(ngModel)]="article.body"><br>
+<button (click)="updateData()">update</button>

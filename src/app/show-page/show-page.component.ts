@@ -17,16 +17,13 @@ export class ShowPageComponent {
   constructor(private route: ActivatedRoute,private http: HttpClient,private router: Router) { 
     let paramId = this.route.snapshot.paramMap.get('id');
     this.paramId = paramId;
-    var url = 'https://crudcrud.com/api/eef79ab2ecf24ef2ad529abd7786633e/unicorns/' + this.paramId;
+    var url = 'https://crudcrud.com/api/c65f8109eb1743299948e051823c9eed/unicorns/' + this.paramId;
     this.http.get<any>(url).subscribe(data => {
       this.article = data;
     }) 
   }
-  editArticle(){
-
-  }
   deleteArticle(){
-    var url = 'https://crudcrud.com/api/eef79ab2ecf24ef2ad529abd7786633e/unicorns/' + this.paramId;
+    var url = 'https://crudcrud.com/api/c65f8109eb1743299948e051823c9eed/unicorns/' + this.paramId;
     this.http.delete<any>(url).subscribe(data => {
       let homePageUrl = '';
       this.router.navigateByUrl(homePageUrl)

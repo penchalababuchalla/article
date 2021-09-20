@@ -12,8 +12,8 @@
 				<td>{{article.title}}</td>
 				<td>{{article.author}}</td>
 				<td>
-					<a routerLink="{{'/articles/'+article._id+'/edit'}}" routerLinkActive="active">show</a>
-					<button (click)="deleteArticle()">delete</button>
+					<a routerLink="{{'/articles/'+article._id}}" routerLinkActive="active">show</a>
+					<button (click)="deleteArticle(article._id)">delete</button>
 				</td>
 			</tr>
 		</tbody>

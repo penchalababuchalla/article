@@ -13,14 +13,18 @@ export class AllArticlesComponent {
   count = 0;
 
   constructor(private route: ActivatedRoute,private http: HttpClient,private router: Router) { 
-    var url = 'https://crudcrud.com/api/eef79ab2ecf24ef2ad529abd7786633e/unicorns';
+    var url = 'https://crudcrud.com/api/c65f8109eb1743299948e051823c9eed/unicorns';
     this.count = this.count + 1;
     this.http.get<any>(url).subscribe(data => {
       this.articles = data;
     }) 
   }
-  deleteArticle(){
-
+  deleteArticle(id:string){
+    var url = 'https://crudcrud.com/api/c65f8109eb1743299948e051823c9eed/unicorns/' + id;
+    this.http.delete<any>(url).subscribe(data => {
+      let homePageUrl = '';
+      this.router.navigateByUrl(homePageUrl)
+    }) 
   }
 
 }

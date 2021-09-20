@@ -6,7 +6,7 @@
 		<a routerLink="" routerLinkActive="active">Back</a>
 	</div>
 	<div class="col-4">
-		<button (click)="editArticle()" class="editbtnclr">Edit</button>
+		<a routerLink="{{'/articles/'+article._id+'/edit'}}" routerLinkActive="active">edit</a>
 		<button (click)="deleteArticle()" class="deletebtnclr">Delete</button>
 	</div>
 </div>

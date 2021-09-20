@@ -20,7 +20,7 @@ export class NewArticleComponent {
   }
 
   saveArticle(){
-    var url = 'https://crudcrud.com/api/eef79ab2ecf24ef2ad529abd7786633e/unicorns'
+    var url = 'https://crudcrud.com/api/c65f8109eb1743299948e051823c9eed/unicorns'
     let newArticle = { title: this.title, author: this.author, body: this.body};
     this.http.post<any>(url, newArticle).subscribe(data => {
           let showPageUrl = '/articles/' + data._id;
